@@ -19,20 +19,20 @@ automático, con el mismo prototipo mostrado en este archivo.
 #include <vector>
 #include <string>
 
-void add_edge(std::vector<std::vector<int>>& graph, int from, int to);
+void add_edge(std::vector<std::vector<int>> &graph, int from, int to);
 
-int n_vertices(std::vector<std::vector<int>> const& graph);
+int n_vertices(std::vector<std::vector<int>> const &graph);
 
-int n_edges(std::vector<std::vector<int>> const& graph);
+int n_edges(std::vector<std::vector<int>> const &graph);
 
-std::vector<int> BFS(std::vector<std::vector<int>> const& graph, int from);
+std::vector<int> BFS(std::vector<std::vector<int>> const &graph, int from);
 
-std::vector<int> DFS(std::vector<std::vector<int>> const& graph, int from);
+std::vector<int> DFS(std::vector<std::vector<int>> const &graph, int from);
 
 std::vector<std::vector<int>> connected_components(
-  std::vector<std::vector<int>> const& graph);
+    std::vector<std::vector<int>> const &graph);
 
-int n_connected_components(std::vector<std::vector<int>> const& graph);
+int n_connected_components(std::vector<std::vector<int>> const &graph);
 
 #include "hw5_impl.h"
 

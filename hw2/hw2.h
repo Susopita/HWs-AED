@@ -16,13 +16,17 @@ automático, con el mismo prototipo mostrado en este archivo.
 
 *******************************************************************************/
 
+#include <vector>
+
 template <typename T>
-struct Heap {
+struct Heap
+{
     bool minHeap;
+    std::vector<T> elements;
 
     Heap(bool isMinHeap = true);
 
-    void insert(T const& element);
+    void insert(T const &element);
 
     T extractTop();
 
@@ -33,6 +37,10 @@ struct Heap {
     bool isEmpty() const;
 
     void clear();
+
+private:
+    void heapifyUp(size_t index);
+    void heapifyDown(size_t index);
 };
 
 #include "hw2_impl.h"
