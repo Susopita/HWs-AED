@@ -17,16 +17,44 @@ automático, con el mismo prototipo mostrado en este archivo.
 *******************************************************************************/
 
 template <typename T>
-struct BST {
+struct Node
+{
+    T data;
+    Node *left;
+    Node *right;
+    Node(T value) : data(value), left(nullptr), right(nullptr) {}
+};
+
+template <typename T>
+struct BST
+{
+private:
+    Node<T> *head;
+
+    Node<T> *insertNode(Node<T> *node, T const &value);
+
+    bool searchNode(Node<T> *node, T const &value) const;
+
+    Node<T> *removeNode(Node<T> *node, T const &value);
+
+    Node<T> *findMinNode(Node<T> *node) const;
+
+    Node<T> *findMaxNode(Node<T> *node) const;
+
+    size_t countNodes(Node<T> *node) const;
+
+    void clearNodes(Node<T> *node);
+
+public:
     BST();
 
     ~BST();
 
-    void insert(T const& value);
+    void insert(T const &value);
 
-    bool search(T const& value) const;
+    bool search(T const &value) const;
 
-    void remove(T const& value);
+    void remove(T const &value);
 
     size_t size() const;
 
