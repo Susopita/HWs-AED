@@ -19,14 +19,16 @@ automático, con el mismo prototipo mostrado en este archivo.
 #include <vector>
 #include <string>
 
-std::vector<int> stringMatch_naive(std::string const& text,
-                                   std::string const& pattern);
+using namespace std;
 
-std::vector<int> stringMatch_RabinKarp(std::string const& text,
-                                       std::string const& pattern);
+vector<int> stringMatch_naive(string const& text,
+                                   string const& pattern);
 
-std::vector<int> stringMatch_KnuthMorrisPratt(std::string const& text,
-                                              std::string const& pattern);
+vector<int> stringMatch_RabinKarp(string const& text,
+                                       string const& pattern);
+
+vector<int> stringMatch_KnuthMorrisPratt(string const& text,
+                                              string const& pattern);
 
 #include "hw4_impl.h"
 
