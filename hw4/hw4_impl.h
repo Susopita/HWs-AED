@@ -101,7 +101,7 @@ vector<int> vecPrefSuf(string pattern) {
     int k = 0;
 
     for (int i = 1; i < sz;) {
-        if (pattern[i] == pattern[sz]) {
+        if (pattern[i] == pattern[k]) {
           k++;
           v[i] = k;
           i++;
